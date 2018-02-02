@@ -29,6 +29,10 @@ app.get('/todos',(req,res)=>{
   })
 })
 
+app.get('/',(req,res)=>{
+  res.send('this is gud');
+})
+
 app.delete('/todos/:id',(req,res)=>{
   var id= req.params.id;
   if(!ObjectID.isValid(id)){
